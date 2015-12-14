@@ -1,0 +1,63 @@
+<html>
+<head>
+	<title>Hangman</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link href='https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans|Indie+Flower' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<h1 id="title">Hangman</h1>
+	<div id="container">
+		<div id="header">
+			<h3>
+				You have <span id="lives">4</span> Lives left.
+				<br>
+				There are <span id="numLetters"></span> letters in this word.
+			</p>
+			<h1 id="word"></h1>
+		</div>
+		
+		<div id="letters">
+			<p>
+				<a id="q">Q</a>
+				<a id="w">W</a>
+				<a id="e">E</a>
+				<a id="r">R</a>
+				<a id="t">T</a>
+				<a id="y">Y</a>
+				<a id="u">U</a>
+				<a id="i">I</a>
+				<a id="o">O</a>
+				<a id="p">P</a>
+			</p>
+			<p>
+				<a id="a">A</a>
+				<a id="s">S</a>
+				<a id="d">D</a>
+				<a id="f">F</a>
+				<a id="g">G</a>
+				<a id="h">H</a>
+				<a id="j">J</a>
+				<a id="k">K</a>
+				<a id="l">L</a>
+			</p>
+			<p>
+				<a id="z">Z</a>
+				<a id="x">X</a>
+				<a id="c">C</a>
+				<a id="v">V</a>
+				<a id="b">B</a>
+				<a id="n">N</a>
+				<a id="m">M</a>
+			</p>
+		</div>
+
+	</div>
+
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+	<script type="text/javascript" src="wordbank.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+	<script type="text/javascript" src="clickLetter.js"></script>
+
+</body>
+</html>

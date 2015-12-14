@@ -1,0 +1,36 @@
+#title {
+	text-align: center;
+	color: #990033;
+	font-size: 70px;
+	font-family: 'Indie Flower', cursive;
+	padding-top: 50px;
+}
+
+#container {
+	width: 50%;
+	border-radius: 5px;
+	padding: 10px;
+	background-color: #d9d9d9;
+	margin: 3% auto;
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 25px;
+	color: #990033;
+}
+
+#letters a {
+	color: black;
+	background-color: white;
+	border-radius: 5px;
+	padding: 5px;
+	cursor: pointer;
+	font-family: 'Inconsolata';
+	font-size: 40px;
+}
+
+#letters a:hover {
+	color: #990033;
+}
+
+
+
