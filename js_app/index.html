@@ -5,11 +5,18 @@
 	<link href='https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans|Indie+Flower' rel='stylesheet' type='text/css'>
 </head>
 <body>
+
+	<div id="modal">
+		<h1>Sign up to Lettuce...pick your brain</h1>
+		<input id="user-email" placeholder="Enter Email"></input>
+		<button id="submit-email">Submit</button>
+	</div>
+
 	<h1 id="title">Hangman</h1>
 	<div id="container">
 		<div id="header">
 			<h3>
-				You have <span id="lives">4</span> Lives left.
+				You have <span id="lives">5</span> Lives left.
 				<br>
 				There are <span id="numLetters"></span> letters in this word.
 			</p>
@@ -52,6 +59,8 @@
 		</div>
 
 	</div>
+
+	<button id="test">Word API test word</div>
 
 
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
