@@ -32,27 +32,27 @@ window.onload = function() {
 
 
 
-$('#test').click(function(){
+// $('#test').click(function(){
 
-	$.ajax({
-	    url: 'https://wordsapiv1.p.mashape.com/words/?random=true', 
-	    type: 'GET',
-	    beforeSend: function(xhr) {
-	    xhr.setRequestHeader("X-Mashape-Authorization", "l6rMzRqR5UmshjEvJ1cREDuCbVvMp1Ettgejsn9hMoVWr0tmcw")
-	    }
+// 	$.ajax({
+// 	    url: 'https://wordsapiv1.p.mashape.com/words/?random=true', 
+// 	    type: 'GET',
+// 	    beforeSend: function(xhr) {
+// 	    xhr.setRequestHeader("X-Mashape-Authorization", "l6rMzRqR5UmshjEvJ1cREDuCbVvMp1Ettgejsn9hMoVWr0tmcw")
+// 	    }
 
-	}).done(function(data) {
+// 	}).done(function(data) {
 
-		console.log('SUCCESS: ', data);
-		console.log(data.word);
+// 		console.log('SUCCESS: ', data);
+// 		console.log(data.word);
 
-	}).fail(function(err) {
+// 	}).fail(function(err) {
 
-		console.log('ERROR: ', err);
+// 		console.log('ERROR: ', err);
 
-	});
+// 	});
 
-});
+// });
 
 Main.PullWord = function() {
 	Main.Word = Words.List[(Math.floor(Math.random()*Main.NumInWordBank))];
