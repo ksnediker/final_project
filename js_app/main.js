@@ -81,8 +81,8 @@ Main.UpdateLetter = function(letter) {
 	// loops through word to see if a correct letter has been chosen
 	for(var j=0; j<Main.Word.length; j++) {
 		Main.WordArray[j] = Main.Word.charAt(j);
+		// if a correct letter is chosen the counter goes up by 1
 		if(Main.Word.charAt(j) == letter) {
-			// if a correct letter is chosen the counter goes up by 1
 			Main.WordUArray[j] = letter;
 			Main.Changes += 1;
 		}

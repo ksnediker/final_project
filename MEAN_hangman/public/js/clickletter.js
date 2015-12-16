@@ -1,7 +1,7 @@
 $(function(){
 	$("#a").click(function(event) {
 			event.preventDefault();
-			Main.UpdateLetter("a");
+			Main.updateLetter("a");
 	});
 	}
 );
@@ -9,7 +9,7 @@ $(function(){
 $(function(){
 	$("#b").click(function(event) {
 			event.preventDefault();
-			Main.UpdateLetter("b");
+			Main.updateLetter("b");
 	});
 	}
 );
@@ -17,7 +17,7 @@ $(function(){
 $(function(){
 	$("#c").click(function(event) {
 			event.preventDefault();
-			Main.UpdateLetter("c");
+			Main.updateLetter("c");
 	});
 	}
 );
@@ -25,7 +25,7 @@ $(function(){
 $(function(){
 	$("#d").click(function(event) {
 			event.preventDefault();
-			Main.UpdateLetter("d");
+			Main.updateLetter("d");
 	});
 	}
 );
@@ -33,7 +33,7 @@ $(function(){
 $(function(){
 	$("#e").click(function(event) {
 			event.preventDefault();
-			Main.UpdateLetter("e");
+			Main.updateLetter("e");
 	});
 	}
 );
@@ -41,7 +41,7 @@ $(function(){
 $(function(){
 	$("#f").click(function(event) {
 			event.preventDefault();
-			Main.UpdateLetter("f");
+			Main.updateLetter("f");
 	});
 	}
 );
@@ -49,7 +49,7 @@ $(function(){
 $(function(){
 	$("#g").click(function(event) {
 			event.preventDefault();
-			Main.UpdateLetter("g");
+			Main.updateLetter("g");
 	});
 	}
 );
@@ -57,7 +57,7 @@ $(function(){
 $(function(){
 	$("#h").click(function(event) {
 			event.preventDefault();
-			Main.UpdateLetter("h");
+			Main.updateLetter("h");
 	});
 	}
 );
@@ -65,7 +65,7 @@ $(function(){
 $(function(){
 	$("#i").click(function(event) {
 			event.preventDefault();
-			Main.UpdateLetter("i");
+			Main.updateLetter("i");
 	});
 	}
 );
@@ -73,7 +73,7 @@ $(function(){
 $(function(){
 	$("#j").click(function(event) {
 			event.preventDefault();
-			Main.UpdateLetter("j");
+			Main.updateLetter("j");
 	});
 	}
 );
@@ -81,13 +81,13 @@ $(function(){
 $(function(){
 	$("#k").click(function(event) {
 			event.preventDefault();
-			Main.UpdateLetter("k");
+			Main.updateLetter("k");
 	});
 	}
 );$(function(){
 	$("#l").click(function(event) {
 			event.preventDefault();
-			Main.UpdateLetter("l");
+			Main.updateLetter("l");
 	});
 	}
 );
@@ -95,7 +95,7 @@ $(function(){
 $(function(){
 	$("#m").click(function(event) {
 			event.preventDefault();
-			Main.UpdateLetter("m");
+			Main.updateLetter("m");
 	});
 	}
 );
@@ -103,7 +103,7 @@ $(function(){
 $(function(){
 	$("#n").click(function(event) {
 			event.preventDefault();
-			Main.UpdateLetter("n");
+			Main.updateLetter("n");
 	});
 	}
 );
@@ -111,7 +111,7 @@ $(function(){
 $(function(){
 	$("#o").click(function(event) {
 			event.preventDefault();
-			Main.UpdateLetter("o");
+			Main.updateLetter("o");
 	});
 	}
 );
@@ -119,7 +119,7 @@ $(function(){
 $(function(){
 	$("#p").click(function(event) {
 			event.preventDefault();
-			Main.UpdateLetter("p");
+			Main.updateLetter("p");
 	});
 	}
 );
@@ -127,7 +127,7 @@ $(function(){
 $(function(){
 	$("#q").click(function(event) {
 			event.preventDefault();
-			Main.UpdateLetter("q");
+			Main.updateLetter("q");
 	});
 	}
 );
@@ -135,7 +135,7 @@ $(function(){
 $(function(){
 	$("#r").click(function(event) {
 			event.preventDefault();
-			Main.UpdateLetter("r");
+			Main.updateLetter("r");
 	});
 	}
 );
@@ -143,7 +143,7 @@ $(function(){
 $(function(){
 	$("#s").click(function(event) {
 			event.preventDefault();
-			Main.UpdateLetter("s");
+			Main.updateLetter("s");
 	});
 	}
 );
@@ -151,7 +151,7 @@ $(function(){
 $(function(){
 	$("#t").click(function(event) {
 			event.preventDefault();
-			Main.UpdateLetter("t");
+			Main.updateLetter("t");
 	});
 	}
 );
@@ -159,7 +159,7 @@ $(function(){
 $(function(){
 	$("#u").click(function(event) {
 			event.preventDefault();
-			Main.UpdateLetter("u");
+			Main.updateLetter("u");
 	});
 	}
 );
@@ -167,13 +167,13 @@ $(function(){
 $(function(){
 	$("#v").click(function(event) {
 			event.preventDefault();
-			Main.UpdateLetter("v");
+			Main.updateLetter("v");
 	});
 	}
 );$(function(){
 	$("#w").click(function(event) {
 			event.preventDefault();
-			Main.UpdateLetter("w");
+			Main.updateLetter("w");
 	});
 	}
 );
@@ -181,7 +181,7 @@ $(function(){
 $(function(){
 	$("#x").click(function(event) {
 			event.preventDefault();
-			Main.UpdateLetter("x");
+			Main.updateLetter("x");
 	});
 	}
 );
@@ -189,7 +189,7 @@ $(function(){
 $(function(){
 	$("#y").click(function(event) {
 			event.preventDefault();
-			Main.UpdateLetter("y");
+			Main.updateLetter("y");
 	});
 	}
 );
@@ -197,7 +197,7 @@ $(function(){
 $(function(){
 	$("#z").click(function(event) {
 			event.preventDefault();
-			Main.UpdateLetter("z");
+			Main.updateLetter("z");
 	});
 	}
 );
