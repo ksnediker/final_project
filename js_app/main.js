@@ -25,8 +25,6 @@ Main.WordU = "";
 // functions
 //============
 
-window.onload = function() {
-
 // Gets random word
 
 
@@ -70,7 +68,7 @@ Main.SetUnderline = function() {
 		Main.WordUArray[i] = "_";
 	}
 	// joins the array into a string and sets the word and numLetters text in the HTML file
-	Main.WordU = Main.WordUArray.join("");
+	Main.WordU = Main.WordUArray.join(" ");
 	document.getElementById("word").innerHTML = Main.WordU;
 	document.getElementById("numLetters").innerHTML = Main.Word.length;
 }
@@ -117,7 +115,6 @@ Main.UpdateLetter = function(letter) {
 Main.PullWord();
 Main.SetUnderline();
 
-}
 
 
 

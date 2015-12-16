@@ -51,7 +51,7 @@ app.post('/signup', function(req, res) {
 	user.save(function(err) {
 		if (err) {
 			console.log(err);
-			res.statisCode = 503;
+			res.statusCode = 503;
 		} else {
 			res.cookie("loggedinID", user.id);
 			res.redirect("/");
@@ -65,19 +65,18 @@ app.post('/signup', function(req, res) {
 // ==========================
 
 app.post('/login', function(req, res) {
-	var user = User( {
-		email: req.body.email,
-		password: req.body.password,
-		wins: req.body.wins,
-		loses: req.body.loses
-	});
-	if (err) {
-		console.log(err);
-		res.statisCode = 503;
-	} else {
-		res.cookie("loggedinID", user.id);
+	User.findOne({'email': req.body.email}, function(err, user) {
+		if(err) {
+			console.log("err: ", err);
+			res.send("error");
+			return;
+		}
+		if(user != null && req.body.password == user.password) {
+			res.cookie("loggedinID", user.id);
+		}
 		res.redirect("/");
-	}
+		console.log("this is a user: ", user);
+	});
 });
 
 
@@ -85,9 +84,9 @@ app.post('/login', function(req, res) {
 // Put user wins and loses
 // ==========================
 
-app.put('/user/:id', function(req, res) {
+// app.put('/user/:id', function(req, res) {
 
-})
+// })
 
 // app.get('/game', function(request, response) {
 // 	console.log(request.cookies.loggedinID);
