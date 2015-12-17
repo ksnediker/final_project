@@ -29,7 +29,7 @@ Main.word = "";
 Main.wordU = "";
 
 // wins and loses
-Main.wins = -1;
+Main.wins = 0;
 Main.loses = 0;
 
 
@@ -128,7 +128,7 @@ Main.updateLetter = function(letter) {
 		over = true;
 		console.log('is over: ', over);
 		Main.wins ++;
-		document.getElementById("wins").innerHTML = Main.wins
+		document.getElementById("wins").innerHTML = Main.wins;
 		Main.resetGame();
 	}
 
@@ -146,7 +146,7 @@ Main.updateLetter = function(letter) {
 	if (over) {
 		console.log('is over inside if statement: ', over);
 		over = false;
-		
+
 		var score = {
 			wins: Main.wins,
 			loses: Main.loses
