@@ -39,12 +39,12 @@ var User = require('./models/user');
 
 app.post('/signup', function(req, res) {
 	console.log(req.body);
-	var user = new User(req.body);
-	// 	email: req.body.email,
-	// 	password: req.body.password,
-	// 	wins: req.body.wins,
-	// 	loses: req.body.loses
-	// });
+	var user = new User({
+		email: req.body.email,
+		password: req.body.password,
+		wins: 0,
+		loses: 0
+	});
 
 	// console.log(user);
 	// console.log(user.id);
@@ -89,31 +89,61 @@ app.post('/login', function(req, res) {
 
 app.put('/users/:id', function(req, res) {
 	console.log(req.body);
-	User.findOneAndUpdate( {_id: req.params.id}, req.body, function(err, user) {
-		res.send(user);
+	User.findOneAndUpdate({_id: req.params.id}, req.body, function(err, user) {
+			res.send(user);
+	});
+	
+});
+
+// Update
+// app.put('/instructor/:id', function(req, res) {
+// 	Instructor.findOneAndUpdate( {_id: req.params.id}, req.body, function(err, instructor) {
+// 		res.send(instructor);
+// 	});
+// });
+
 	// User.findOneAndUpdate({'wins': req.body.wins}, function(err, user) {
 	// 	if(err) {
 	// 		console.log("error is: ", err);
 	// 		res.send("error");
 	// 		return;
 	// 	}
-	});
-});
 
 
 // ==========================
 // Get user data
 // ==========================
 
+app.get('/users/:id', function(req, res) {
+	User.findById(req.params.id).then(function(users) {
+		res.send(users);
+	});
+});
+
+
+// =========================
+
 app.get('/users', function(req, res) {
-	User.find().then(function(result) {
-		res.send(result);
+	User.find().then(function(users) { 
+		res.send(users);
 	})
 })
 
 
+// var slime = new User({
+// 	email: "Slimer",
+// 	password: "Slimer",
+// 	wins: 5,
+// 	loses: 100
+// });
 
-
+// slime.save(function(err) {
+// 	if (err) {
+// 		console.log(err);
+// 	} else {
+// 		console.log('saved: ' + slime.email);
+// 	}
+// });
 
 
 // =============================

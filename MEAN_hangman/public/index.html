@@ -7,11 +7,17 @@
 </head>
 <body>
 
+<!-- 	<form action="/user/:id" method="get">
+		<div>
+			<p name="email" id="email"></p>
+		</div>
+	</form> -->
+
 	<form action="/signup" method="post">
 		<div id="sign-up-form">
 			<h1>Sign up to play</h1>
 			<input name="email" id="user-email" placeholder="Enter Email"></input>
-			<input name="password" id="user-password" placeholder="Enter Password"></input>
+			<input type="password" name="password" id="user-password" placeholder="Enter Password"></input>
 			<input type="submit" id="submit-email">
 		</div>
 	</form>
@@ -20,7 +26,7 @@
 		<div id="log-in-form">
 			<h1>Log in to play</h1>
 			<input name="email" id="user-email" placeholder="Enter Email"></input>
-			<input name="password" id="user-password" placeholder="Enter Password"></input>
+			<input type="password" name="password" id="user-password" placeholder="Enter Password"></input>
 			<input type="submit" id="submit-email">
 		</div>
 	</form>
@@ -36,7 +42,7 @@
 			<tr>
 				<td id="wins-row">Wins</td>
 				<td>  </td>
-				<td id="loses-row">Loses</td>
+				<td id="loses-row">Losses</td>
 			</tr>
 			<tr>
 				<td id="wins">0</td>

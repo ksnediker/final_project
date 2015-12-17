@@ -10,6 +10,19 @@
 	font-family: 'Indie Flower', cursive;
 }
 
+#logout-email {
+	width: 90%;
+	color: #990033;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 10px;
+	text-align: right;
+}
+
+#email {
+	text-align: right;
+	margin: 50px;
+}
+
 #title {
 	text-align: center;
 	color: #990033;

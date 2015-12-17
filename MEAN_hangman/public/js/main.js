@@ -46,6 +46,7 @@ $('#scoreboard').hide();
 // hides container until new word button is clicked
 $('#container').hide();
 
+
 // clears out previous word and underlines
 Main.resetGame = function() {
 	Main.wordArray = [];
@@ -79,13 +80,18 @@ Main.setUnderline = function() {
 var userId = Cookies.get("loggedinID")
 if(userId) {
 	console.log("cookie exists");
+	$('#sign-up-form').hide();
+	$('#log-in-form').hide();
 	$('#new-word-button').show();
 	$('#scoreboard').show();
+	document.getElementById("user-email")
 };
 
 // // Loops through word and checks to see if the letter chosen matches any of the letters in the word. If the letter does not match, the number of lives decreases. If the letter chosen matches a letter in the word, that letter populates and lives does not go down
 
 Main.updateLetter = function(letter) {
+
+	console.log('UPDATE LETTER FUNCTION');
 // counter to keep track of whether lives is above 0
 	Main.changes = 0;
 // loops through word to see if a correct letter has been chosen
@@ -114,20 +120,51 @@ Main.updateLetter = function(letter) {
 	word2 = Main.wordUArray.join(" ");
 
 	// checks to see if the chosen word matches the updated underine array, if so, player wins
-	if(word1 == word2) {
+
+	var over = false;
+	console.log('Word1: ', word1);
+	console.log('Word2: ', word2);
+	if (word1 == word2 && word1 != "") {
+		over = true;
+		console.log('is over: ', over);
 		Main.wins ++;
 		document.getElementById("wins").innerHTML = Main.wins
 		Main.resetGame();
 	}
 
 	// if lives goes below 1, player loses
-	if(Main.lives < 1) {
+	if (Main.lives < 1) {
+		over = true;
+		console.log('is over: ', over);
 		// inserts correct word onto page
 		document.getElementById("word").innerHTML = word1;
 		Main.loses ++;
 		document.getElementById("loses").innerHTML = Main.loses;
 		Main.resetGame();
 	}
+
+	if (over) {
+		console.log('is over inside if statement: ', over);
+		over = false;
+		
+		var score = {
+			wins: Main.wins,
+			loses: Main.loses
+		}
+
+		console.log('Before ajax: ', score);
+
+		$.ajax({
+			url: "/users/" + Cookies.get('loggedinID'),
+			method: "PUT",
+			data: score
+		}).done(function() {
+			console.log('Ajax request log: ', score);
+		}).fail(function(err) {
+			console.log(err);
+		})
+
+  }
 };
 
 // Click function for new word button
@@ -139,6 +176,9 @@ $('#new-word-button').click(function() {
 	$('#container').show();
 });
 
+// putting wins and loses into user data
+// Main.updateData = function() {
+// }
 // Function to remove the user's cookie and then reload the page
 Main.invokeLogOut = function(data) {
 	var $logOut = $('#logout');
@@ -154,12 +194,6 @@ Main.invokeLogOut();
 
 Main.updateLetter();
 
-// putting wins and loses into user data
-// $.ajax({
-// 	url: "http://localhost:3000/users",
-// 	method: "PUT",
-// 	data: 
-// })
 
 
 
