@@ -1,9 +1,40 @@
+#sign-up-form {
+	color: #990033;
+	font-size: 10px;
+	font-family: 'Indie Flower', cursive;
+}
+
+#log-in-form {
+	color: #990033;
+	font-size: 10px;
+	font-family: 'Indie Flower', cursive;
+}
+
 #title {
 	text-align: center;
 	color: #990033;
 	font-size: 70px;
 	font-family: 'Indie Flower', cursive;
-	padding-top: 50px;
+}
+
+#scoreboard {
+	width: 25%;
+	border-radius: 5px;
+	border-color: #990033;
+	padding: 10px;
+	background-color: #d9d9d9;
+	margin: auto;
+	margin-bottom: 18px;
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+	color: #990033;
+}
+
+#table {
+	text-align: center;
+	margin: auto;
+	display: inline-block;
 }
 
 #container {
@@ -32,5 +63,35 @@
 	color: #990033;
 }
 
-#sign-up-form {
+
+#new-word {
+	width: 100%;
+	text-align: center;
+	display: inline-block;
+	margin: auto;
 }
+
+#new-word-button {
+	width: 150px;
+	height: 60px;
+	color: white;
+	border-width: 5px;
+	border-color: #990033;
+	font-family: 'Indie Flower', cursive;
+	font-size: 30px;
+	font-style: bold;
+	background-color: #990033;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

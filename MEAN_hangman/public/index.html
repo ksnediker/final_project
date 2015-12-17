@@ -9,7 +9,7 @@
 
 	<form action="/signup" method="post">
 		<div id="sign-up-form">
-			<h1>Sign up to play MEAN Hangman</h1>
+			<h1>Sign up to play</h1>
 			<input name="email" id="user-email" placeholder="Enter Email"></input>
 			<input name="password" id="user-password" placeholder="Enter Password"></input>
 			<input type="submit" id="submit-email">
@@ -18,21 +18,46 @@
 
 	<form action="/login" method="post">
 		<div id="log-in-form">
-			<h1>Log in to play MEAN Hangman</h1>
+			<h1>Log in to play</h1>
 			<input name="email" id="user-email" placeholder="Enter Email"></input>
 			<input name="password" id="user-password" placeholder="Enter Password"></input>
 			<input type="submit" id="submit-email">
 		</div>
 	</form>
 
+	<div id="logout">
+		<button id="logout-button">Logout</button>
+	</div>
+
 	<h1 id="title">MEAN Hangman</h1>
+
+	<div id="scoreboard">
+		<table id="table">
+			<tr>
+				<td id="wins-row">Wins</td>
+				<td>  </td>
+				<td id="loses-row">Loses</td>
+			</tr>
+			<tr>
+				<td id="wins">0</td>
+				<td> | </td>
+				<td id="loses">0</td>
+			</tr>
+		</table>
+	</div>
+
+	<div id="new-word">
+		<button id="new-word-button">New word</button>
+	</div>
+
 	<div id="container">
 		<div id="header">
 			<h3>
 				You have <span id="lives">5</span> Lives left.
 				<br>
+				<br>
 				There are <span id="numLetters"></span> letters in this word.
-			</p>
+			</h3>
 			<h1 id="word"></h1>
 		</div>
 		
@@ -70,7 +95,6 @@
 				<a id="m">M</a>
 			</p>
 		</div>
-
 	</div>
 
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>

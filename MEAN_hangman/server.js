@@ -38,15 +38,16 @@ var User = require('./models/user');
 // =============================
 
 app.post('/signup', function(req, res) {
-	var user = new User( {
-		email: req.body.email,
-		password: req.body.password,
-		wins: req.body.wins,
-		loses: req.body.loses
-	});
+	console.log(req.body);
+	var user = new User(req.body);
+	// 	email: req.body.email,
+	// 	password: req.body.password,
+	// 	wins: req.body.wins,
+	// 	loses: req.body.loses
+	// });
 
-	console.log(user);
-	console.log(user.id);
+	// console.log(user);
+	// console.log(user.id);
 
 	user.save(function(err) {
 		if (err) {
@@ -54,6 +55,7 @@ app.post('/signup', function(req, res) {
 			res.statusCode = 503;
 		} else {
 			res.cookie("loggedinID", user.id);
+			console.log(user);
 			res.redirect("/");
 		}
 	});
@@ -76,6 +78,7 @@ app.post('/login', function(req, res) {
 		}
 		res.redirect("/");
 		console.log("this is a user: ", user);
+		console.log("this is req.body: ", req.body);
 	});
 });
 
@@ -84,17 +87,29 @@ app.post('/login', function(req, res) {
 // Put user wins and loses
 // ==========================
 
-// app.put('/user/:id', function(req, res) {
+app.put('/users/:id', function(req, res) {
+	console.log(req.body);
+	User.findOneAndUpdate( {_id: req.params.id}, req.body, function(err, user) {
+		res.send(user);
+	// User.findOneAndUpdate({'wins': req.body.wins}, function(err, user) {
+	// 	if(err) {
+	// 		console.log("error is: ", err);
+	// 		res.send("error");
+	// 		return;
+	// 	}
+	});
+});
 
-// })
 
-// app.get('/game', function(request, response) {
-// 	console.log(request.cookies.loggedinID);
-// 	if(request.cookies.loggedinID) {
+// ==========================
+// Get user data
+// ==========================
 
-// 	}
-// 	response.send("hello");
-// });
+app.get('/users', function(req, res) {
+	User.find().then(function(result) {
+		res.send(result);
+	})
+})
 
 
 
