@@ -106,6 +106,7 @@ Main.updateLetter = function(letter) {
 	// if changes goes below 1 lives decreases 
 	if(Main.changes < 1) {
 		Main.lives -= 1;
+		$.get('#')
 		document.getElementById("lives").innerHTML = Main.lives;
 	}
 
@@ -166,6 +167,16 @@ Main.updateLetter = function(letter) {
 
   }
 };
+
+$.ajax({
+	url: "/users/" + Cookies.get('loggedinID'),
+	method: "GET",
+	data: score
+}).done(function() {
+	document.getElementById("wins").innerHTML = Main.loses;
+	document.getElementById("loses").innerHTML = Main.wins;
+})
+
 
 // Click function for new word button
 $('#new-word-button').click(function() {
